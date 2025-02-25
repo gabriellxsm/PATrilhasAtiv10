@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random rand = new Random();
+        int[,] matriz = new int[4, 2];
+        int soma = 0;
+
+        // Preencher a matriz com números aleatórios entre 1 e 10
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                matriz[i, j] = rand.Next(1, 11);
+                soma += matriz[i, j];
+            }
+        }
+
+        // Exibir a matriz
+        Console.WriteLine("Matriz 4x2:");
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                Console.Write(matriz[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        // Exibir a soma dos valores
+        Console.WriteLine($"Soma de todos os valores: {soma}");
+    }
+}
