@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[,] matriz = new int[10, 10];
+
+        // Preencher a matriz
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 10; j++)
+            {
+                Console.Write($"Digite o valor para posição [{i}, {j}]: ");
+                matriz[i, j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        // Imprimir diagonal principal
+        Console.WriteLine("Diagonal Principal:");
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine(matriz[i, i]);
+        }
+    }
+}
