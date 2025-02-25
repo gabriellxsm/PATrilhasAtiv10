@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double[,] matriz = {
+            {1.5, 2.5},
+            {3.5, 4.5}
+        };
+        double soma = 0;
+        int totalElementos = 0;
+
+   
+        for (int i = 0; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                soma += matriz[i, j];
+                totalElementos++;
+            }
+        }
+
+      
+        double media = soma / totalElementos;
+
+        Console.WriteLine($"Média dos valores: {media}");
+    }
+}
